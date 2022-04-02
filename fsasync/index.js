@@ -12,9 +12,19 @@ const fs = require("fs");
 //     console.log(err);
 // });
 
-fs.readFile("read.txt","utf-8",(err,data)=>{
-    console.log("read the data successfully");
+// fs.readFile("read.txt","utf-8",(err,data)=>{
+//     console.log("read the data successfully");
+//     console.log(err);
+//     console.log(data);
+// });
+
+// fs.rename("read.txt","weather.txt",(err)=>{
+//     console.log(err);
+// });
+
+fs.mkdir("sneha2",(err)=>{
+    console.log("folder is creater");
     console.log(err);
-    console.log(data);
 });
+
 
