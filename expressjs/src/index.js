@@ -33,81 +33,95 @@ app.get("/about", (req, res) => {
   res.render("about");
 });
 
+// 
+
 app.get("/contact", (req, res) => {
-  res.status(200).send("this is my contact page");
+  // res.status(200).render("this is my contact page");
+  res.status(200).render("contact");
 });
 
-app.get("/temp", (req, res) => {
-  res.status(200).send([
-    {
-      id: 1,
-      name: "sneha",
-      age: 21,
-      stream: "computer science",
-      college: "camellia institute of technology",
-    },
-
-    {
-      id: 1,
-      name: "sneha",
-      age: 21,
-      stream: "computer science",
-      college: "camellia institute of technology",
-    },
-
-    {
-      id: 1,
-      name: "sneha",
-      age: 21,
-      stream: "computer science",
-      college: "camellia institute of technology",
-    },
-
-    {
-      id: 1,
-      name: "sneha",
-      age: 21,
-      stream: "computer science",
-      college: "camellia institute of technology",
-    },
-  ]);
+app.get("/about/*",(req,res)=>{
+  res.render("404",{
+    errorcomment:"About page could not be found!!"
+  });
+});
+app.get("/contact/*",(req,res)=>{
+  res.render("404",{
+    errorcomment:"contact page could not be found!!"
+  });
 });
 
-app.get("/temp", (req, res) => {
-  res.status(200).json([
-    {
-      id: 1,
-      name: "sneha",
-      age: 21,
-      stream: "computer science",
-      college: "camellia institute of technology",
-    },
+// app.get("/temp", (req, res) => {
+//   res.status(200).send([
+//     {
+//       id: 1,
+//       name: "sneha",
+//       age: 21,
+//       stream: "computer science",
+//       college: "camellia institute of technology",
+//     },
 
-    {
-      id: 1,
-      name: "sneha",
-      age: 21,
-      stream: "computer science",
-      college: "camellia institute of technology",
-    },
+//     {
+//       id: 1,
+//       name: "sneha",
+//       age: 21,
+//       stream: "computer science",
+//       college: "camellia institute of technology",
+//     },
 
-    {
-      id: 1,
-      name: "sneha",
-      age: 21,
-      stream: "computer science",
-      college: "camellia institute of technology",
-    },
+//     {
+//       id: 1,
+//       name: "sneha",
+//       age: 21,
+//       stream: "computer science",
+//       college: "camellia institute of technology",
+//     },
 
-    {
-      id: 1,
-      name: "sneha",
-      age: 21,
-      stream: "computer science",
-      college: "camellia institute of technology",
-    },
-  ]);
-});
+//     {
+//       id: 1,
+//       name: "sneha",
+//       age: 21,
+//       stream: "computer science",
+//       college: "camellia institute of technology",
+//     },
+//   ]);
+// });
+
+// app.get("/temp", (req, res) => {
+//   res.status(200).json([
+//     {
+//       id: 1,
+//       name: "sneha",
+//       age: 21,
+//       stream: "computer science",
+//       college: "camellia institute of technology",
+//     },
+
+//     {
+//       id: 1,
+//       name: "sneha",
+//       age: 21,
+//       stream: "computer science",
+//       college: "camellia institute of technology",
+//     },
+
+//     {
+//       id: 1,
+//       name: "sneha",
+//       age: 21,
+//       stream: "computer science",
+//       college: "camellia institute of technology",
+//     },
+
+//     {
+//       id: 1,
+//       name: "sneha",
+//       age: 21,
+//       stream: "computer science",
+//       college: "camellia institute of technology",
+//     },
+//   ]);
+// });
 
 //the method are identical when an object or array is passed, but res.json() will also convert non object, such as null and undefined which are not valid JSON.
 
